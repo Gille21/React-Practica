@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Formulario from './Formulario';
 import Resultados from './Resultados';
 import Body from './Body';
+import Main from './main';
 import About from './About';
 import Shop from './Shop';
 import Producto from './Producto';
@@ -27,7 +28,7 @@ function App() {
       <div className="root">
       <Header />
         <Routes>        
-        <Route path="/" element={<Body />} />
+        <Route path="/" element={<Main />} />
             <Route path="/about" element={<About />} /> {/* Ruta para la página About */}
             <Route path="/shop" element={<Shop />} /> {/* Ruta para la página About */}
             <Route path="/formulario" element={<Formulario />} />

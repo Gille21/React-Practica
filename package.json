@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Proeycto de Practica 3",
   "main": "index.js",
+  "homepage": "http://www.dyssas.com.co",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "react-scripts start",
@@ -31,6 +32,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@types/jwt-decode": "^3.1.0",
     "axios": "^1.6.0",
     "boostrap": "^2.0.0",
     "chart.js": "^4.4.0",

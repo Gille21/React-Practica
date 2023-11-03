@@ -6,6 +6,7 @@ import './Styles/bootstrap.min.css';
 function Resultado() {
   const location = useLocation();
   const productosFiltrados = location.state.productosFiltrados || [];
+  
 
   return (
     <div>
@@ -20,8 +21,9 @@ function Resultado() {
         <section className="py-5">
           <div className="container px-4 px-lg-5 mt-5">
             <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-              {productosFiltrados.map((producto, index) => (
-                <div className="col mb-5" key={index}>
+              {productosFiltrados.map((producto) => (
+                
+                <div className="col mb-5" key={producto.id}>
                   <div className="card h-100">
                     <div className="card-body p-4">
                       <img
@@ -50,7 +52,7 @@ function Resultado() {
 
                     <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                       <div className="text-center">
-                        <Link to={`/producto/${producto.id_computer}`}>
+                        <Link to={`/producto/${producto.id}`}>
                           <button className="btn btn-outline-dark view-button">
                             View Options
                           </button>
