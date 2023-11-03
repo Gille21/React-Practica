@@ -1,6 +1,6 @@
 import { useAuthStore } from '../store/auth';
 import axios from './axios';
-import jwt_decode from 'jwt-decode';
+import * as jwt_decode from 'jwt-decode';
 import Cookies from 'js-cookie';
 
 // creamos una constante que se exportara, donde realizamos la autenticación del login de usuarios por su token
