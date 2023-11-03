@@ -1,0 +1,36 @@
+/* Footer Styles */
+footer {
+    margin-top: 10px;
+    width: 100% !important;
+    background-color: #212934;
+    color: #cfd6e1;
+  }
+  
+  footer h3 {
+    color: #59ab6e;
+  }
+  
+  footer ul.list-unstyled li a {
+    color: #cfd6e1;
+  }
+  
+  footer ul.list-unstyled li a:hover {
+    color: #69bb7e;
+  }
+
+  footer a{
+    color: #fff;
+  }
+
+  footer a:hover{
+    color: #69bb7e;
+  }
+
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 600px) {
+    footer {
+      padding: 2rem 0;
+    }
+  }
+  

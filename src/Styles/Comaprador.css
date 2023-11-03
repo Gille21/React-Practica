@@ -1,0 +1,36 @@
+/* Estilos para el contenedor del comparador */
+.comparador {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  /* Estilos para la tabla en el comparador */
+  .comparador table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #333;
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para las celdas de encabezado en la tabla del comparador */
+  .comparador th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilos para las celdas de datos en la tabla del comparador */
+  .comparador td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilos para las imágenes en el comparador */
+  .comparador img {
+    width: 100px; /* Ajusta el ancho deseado */
+    height: 100px; /* Ajusta la altura deseada */
+  }
+  

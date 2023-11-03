@@ -1,0 +1,56 @@
+/* Estilo para el contenedor de las tarjetas */
+.card-container {
+  margin-top: 1rem; /* Margen superior para separar las tarjetas del botón */
+}
+
+/* Estilo para la tarjeta de producto */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Estilo para la imagen */
+.product-image {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+}
+
+/* Estilo para el nombre del producto */
+.product-name {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+/* Estilo para el costo */
+.product-cost {
+  font-size: 1.4rem;
+  color: #007bff;
+}
+
+/* Estilo para el botón de vista */
+.view-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el botón "Volver a Formulario" */
+.back-button {
+  margin-top: 1rem; /* Margen superior */
+  margin-bottom: 1rem; /* Margen inferior para separar del contenido debajo */
+}

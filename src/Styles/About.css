@@ -1,0 +1,10 @@
+/* About.css */
+.about-hero-image {
+    max-width: 80%; /* Ajusta el tamaño de la imagen según tus preferencias */
+    height: auto;
+  }
+.about-service-image{
+    max-width: 200%;
+    height: 200%;
+}
+  

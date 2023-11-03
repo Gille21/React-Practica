@@ -1,0 +1,26 @@
+/* Header.css */
+/* Estilos para el encabezado */
+.navbar {
+    background-color: #efefef;
+    margin-bottom: 20px;
+    /* Agrega otros estilos según sea necesario */
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #59ab6e;
+    /* Agrega otros estilos según sea necesario */
+  }
+  
+  .navbar-toggler {
+    /* Agrega estilos para el botón de alternar según sea necesario */
+  }
+  
+  .nav-link {
+    color: #212934;
+    /* Agrega estilos para los enlaces del menú según sea necesario */
+  }
+  
+  /* Agrega otros estilos según sea necesario */
+  

@@ -1,0 +1,62 @@
+/* Estilos para el formulario */
+.form-container {
+    background-color: #D0E8A0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para los elementos del formulario */
+  .form-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-container select,
+  .form-container input[type="number"],
+  .form-container input[type="checkbox"],
+  .form-container .custom-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilos para el botón de envío */
+  .form-container button[type="submit"],
+  .form-container .submit-button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    box-shadow: 0px 2px 8px rgba(0, 64, 0, 0.5);
+    transition: background-color 0.3s;
+  }
+  /* Estilos para el checkbox */
+.form-container input[type="checkbox"] {
+    appearance: none; /* Elimina los estilos nativos del checkbox */
+    width: 20px; /* Ancho personalizado */
+    height: 20px; /* Altura personalizada */
+    background-color: #2E7D32; /* Color de fondo similar al botón */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 5px; /* Espaciado entre el checkbox y el texto */
+    transition: background-color 0.3s;
+  }
+  
+  .form-container input[type="checkbox"]:checked {
+    background-color: #1E7C31; /* Color de fondo cuando está marcado */
+  }
+  
+  .form-container button[type="submit"]:hover,
+  .form-container .submit-button:hover {
+    background-color: #1E7C31;
+  }
+  
