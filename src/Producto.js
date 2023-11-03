@@ -10,7 +10,7 @@ function Producto() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const apiUrl = `http://www.impulsotemporal.com/api/api/computers/${id}/`;
+    const apiUrl = `https://www.impulsotemporal.com/api/api/computers/${id}/`;
     const auth = {
       username: 'samuel',
       password: 'samuel159',
