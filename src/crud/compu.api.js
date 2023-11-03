@@ -6,11 +6,11 @@ const auth = {
     };
 
 const compuApi = axios.create({
-    baseURL: 'https://www.impulsotemporal.com/api/api/computers/'
+    baseURL: 'http://www.impulsotemporal.com/api/api/computers/'
 })
 
 const consApi = axios.create({
-    baseURL: 'https://www.impulsotemporal.com/api/api/consulta/'
+    baseURL: 'http://www.impulsotemporal.com/api/api/consulta/'
 });
 
 export const getAllComp = () => compuApi.get("/", { auth })

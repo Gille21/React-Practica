@@ -22,7 +22,7 @@ function Shop() {
   const [selectedProducts, setSelectedProducts] = useState([]); // Estado para rastrear productos seleccionados
 
   useEffect(() => {
-    const apiUrl = 'https://www.impulsotemporal.com/api/api/computers/';
+    const apiUrl = 'http://www.impulsotemporal.com/api/api/computers/';
 
     axios
       .get(apiUrl, {auth})

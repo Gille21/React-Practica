@@ -14,7 +14,7 @@ function Ccompu(){
         data.append("file",e[0]);
         data.append("upload_preset","compu_default");
         const res = await fetch(
-            "https://api.cloudinary.com/v1_1/deecwop2g/image/upload",
+            "http://api.cloudinary.com/v1_1/deecwop2g/image/upload",
             {
                 method: "POST",
                 body: data,
