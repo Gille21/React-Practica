@@ -110,6 +110,19 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.form-btn-login-2 {
+  padding: 10px 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 20px;
+  border: 0 !important;
+  outline: 0 !important;
+  background: white;
+  color: #2E7D32;
+  cursor: pointer;
+  box-shadow: rgba(46, 125, 50, 1)0px 3px 8px;
+}
+
 .section-login{
   overflow: hidden;
 }

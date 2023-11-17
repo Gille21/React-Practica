@@ -15,7 +15,7 @@ const Home = () => {
     );
 };
 
-//AAca realiza la validación a la hora de ingresar tenga la sesión del login, que vista mostrar
+//Aca realiza la validación a la hora de ingresar tenga la sesión del login, que vista mostrar
 const LoggedInView = ({ user }) => {
     return (
         <center>
@@ -37,7 +37,7 @@ const LoggedInView = ({ user }) => {
     );
 };
 
-export const LoggedOutView = ({ title = 'Home' }) => {
+export const LoggedOutView = ({ title = 'Este portal solo esta disponible para administradores o provedores' }) => {
     return (
         <center>
             <h1>{title}</h1>
@@ -49,7 +49,7 @@ export const LoggedOutView = ({ title = 'Home' }) => {
                 <div className="row">
                     <div className="col-md-12">
                         <Link to="/">
-                            <button className='form-btn-login'>Cotinue</button>
+                            <button className='form-btn-login'>Terminar</button>
                         </Link>
                     </div>
                 </div>

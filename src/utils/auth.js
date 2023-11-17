@@ -1,6 +1,6 @@
 import { useAuthStore } from '../store/auth';
 import axios from './axios';
-import { jwtDecode } from "jwt-decode";
+import {jwtDecode} from 'jwt-decode';
 import Cookies from 'js-cookie';
 
 // creamos una constante que se exportara, donde realizamos la autenticación del login de usuarios por su token
@@ -15,7 +15,10 @@ export const login = async (username, password) => {
         }
         return { data, error: null };
     } catch (error) {
-        console.log(error);
+        return {
+            data: null,
+            error: error.response.data?.detail || 'Algo salió mal.',
+        };
     }
 };
 

@@ -35,6 +35,12 @@ const Login = () => {
             resetForm();
         }
     };
+    
+    const volver = async => {
+        navigate('/');
+        resetForm();
+        
+    };
     return (
         <section className='section-login'>
             <center>
@@ -52,6 +58,7 @@ const Login = () => {
                                         <label htmlFor="" className="form-label">you don't have account? <Link className='Link-label'  to="../views/register">register</Link></label>
                                     </div> 
                         <button className='form-btn-login' type="submit">Login</button>
+                        <button className='form-btn-login-2' onClick={volver}>Volver</button>
                     </form>
                 </div>
             </center>  
