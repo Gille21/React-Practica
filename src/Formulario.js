@@ -79,33 +79,34 @@ function Formulario() {
             <select
               id="nivelEstudios"
               className="custom-select"
-              {...register('nivel_estudios')}
-              onChange={(e) => { setValue('nivel_estudios', e.target.value); handleEstudiosNivelChange(e.target.value); }}
+              {...register('nivelestudios')}
+              onChange={(e) => { setValue('nivelestudios', e.target.value); handleEstudiosNivelChange(e.target.value); }}
               defaultValue="vacio"  
             >
               <option value="vacio" disabled>Selecciona una opción</option>
-              <option value="Primaria">Primaria</option>
-              <option value="Bachiller">Bachiller</option>
-              <option value="Universidad-Posgrado">Universidad Posgrado</option>
-              <option value="Universidad-Pregrado">Universidad Pregrado</option>
+              <option value="primaria">Primaria</option>
+              <option value="bachiller">Bachiller</option>
+              <option value="posgrado">Universidad Posgrado</option>
+              <option value="pregrado">Universidad Pregrado</option>
             </select>
           </div>
         )}
 
         {showEstudiosRamaOptions && (
           <div className="form-group">
-            <label htmlFor="ramaEstudios">¿En qué Rama de Estudios te enfocas?</label>
+            <label htmlFor="ramaestudios">¿En qué Rama de Estudios te enfocas?</label>
             <select
               id="ramaEstudios"
               className="custom-select"
-              {...register('rama_estudios')}
+              {...register('ramaestudios')}
               defaultValue="vacio"  
             >
               <option value="vacio" disabled>Selecciona una opción</option>
-              <option value="Ingeniería y Ciencias Básicas">Ingeniería y Ciencias Básicas</option>
-              <option value="Artes">Artes</option>
-              <option value="Ciencias Empresariales y Jurídicas">Ciencias Empresariales y Jurídicas</option>
-              <option value="Estratégica y Publicidad">Estratégica y Publicidad</option>
+              <option value="ingenieria">Ingeniería</option>
+              <option value="artes">Artes</option>
+              <option value="cienciasbasicas">Ciencias Básicas</option>
+              <option value="empresarial">Ciencias Empresariales</option>
+              <option value="publicidad">Publicidad</option>
             </select>
           </div>
         )}
@@ -114,19 +115,19 @@ function Formulario() {
           <div className="form-group">
             <label htmlFor="areaTrabajo">¿En qué Área te desempeñas?</label>
             <select
-              id="areaTrabajo"
+              id="areatrabajo"
               className="custom-select"
-              {...register('area_trabajo')}
-              onChange={(e) => { setValue('area_trabajo', e.target.value); handleTrabajoAreaChange(e.target.value); }}
+              {...register('areatrabajo')}
+              onChange={(e) => { setValue('areatrabajo', e.target.value); handleTrabajoAreaChange(e.target.value); }}
               defaultValue="vacio"   
             >
               <option value="vacio" disabled>Selecciona una opción</option>
-              <option value="Ingenieria">Ingeniería</option>
-              <option value="Administracion">Administración</option>
-              <option value="Contaduria">Contaduría</option>
-              <option value="Creacion Literaria">Creación Literaria</option>
-              <option value="Ciencias a fines">Ciencias a fines (Biología, Física, Química)</option>
-              <option value="Diseño Grafico">Diseño Gráfico</option>
+              <option value="ingenieria">Ingeniería</option>
+              <option value="administracion">Administración</option>
+              <option value="contaduria">Contaduría</option>
+              <option value="literaria">Creación Literaria</option>
+              <option value="ciencias">Ciencias a fines (Biología, Física, Química)</option>
+              <option value="diseñografico">Diseño Gráfico</option>
             </select>
           </div>
         )}
@@ -139,9 +140,9 @@ function Formulario() {
             id="tipComputador"
             className="custom-select"
             {...register('tip_computador', { required: true })}
-            defaultValue="Sin Especificar"  
+            defaultValue="vacio" 
           >
-            <option value="Sin Especificar" disabled>Sin Especificar</option>
+            <option value="vacio" disabled>Selecciona una opción</option>
             <option value="Portatil">Portátil</option>
             <option value="Escritorio">Escritorio</option>
           </select>

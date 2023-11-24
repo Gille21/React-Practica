@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Styles/bootstrap.min.css';
+import './Styles/Shop.css';
 import { Link } from 'react-router-dom';
 import Comparador from './Comparador'; // Importa el componente Comparador
 

@@ -135,8 +135,9 @@ const LoggedInView = ({ user }) => {
                         </select>
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="" className="form-label">Modelo Grafica</label>
-                        <input type="text" className="form-control" {...register('tip_grafica',{required: false})}/>
+                        <label htmlFor="" className="form-label">Modelo Grafica *</label>
+
+                        <input  placeholder='Si no tiene escriba No' type="text" className="form-control" {...register('tip_grafica',{required: true})}/>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="" className="form-label">Capacidad de la grafica</label>
