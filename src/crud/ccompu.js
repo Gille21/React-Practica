@@ -1,7 +1,7 @@
 import '../Styles/crud.css';
 import '../Styles/bootstrap.min.css';
 import React, {useState} from 'react';
-import {useForm} from 'react-hook-form';
+import {useForm, useFieldArray} from 'react-hook-form';
 import {createCompu} from './compu.api';
 import { Link } from 'react-router-dom';
 import { useAuthStore } from '../store/auth';
@@ -21,7 +21,12 @@ const Ccompu = () => {
 //Aca realiza la validación a la hora de ingresar tenga la sesión del login, que vista mostrar
 const LoggedInView = ({ user }) => {
 
-    const {register, handleSubmit, formState: {errors}} = useForm();
+    const {register, control ,handleSubmit, formState: {errors}} = useForm();
+
+    const {fields, append, remove} = useFieldArray ({
+        control,
+        name: "nivel_estudio"
+    })
 
     const uploadImage = async (e) => {
         const data = new FormData();
@@ -38,11 +43,23 @@ const LoggedInView = ({ user }) => {
         return String(file.secure_url)
     }
 
+    const nivelEstudios = async (e) => {
+        const data = []
+        for (const element of e){
+            data.push(element["nivel_estudio"])
+        }
+        return data
+    }
+
 
     const onSubmit = handleSubmit(async data => {
 
+
         const img = await uploadImage(data["img"])
         data["img"] = img
+        const est = await nivelEstudios(data["nivel_estudio"])
+        data["id_user"] = user["user_id"]
+        data["nivel_estudio"] = est.toString()
         const res = await createCompu(data);
     })
 
@@ -170,6 +187,7 @@ const LoggedInView = ({ user }) => {
                             <option value="DEFAULT">Escoge..</option>
                             <option value="Trabajo">Trabajo</option>
                             <option value="Gamer">Gamer</option>
+                            <option value="Estudios">Estudios</option>
                             <option value="Entretenimiento">Entretenimiento</option>
                         </select>
                     </div>
@@ -180,6 +198,39 @@ const LoggedInView = ({ user }) => {
                     <div className="mb-3">
                         <label htmlFor="" className="form-label">Imagen del equipo *</label>
                         <input type="file" className="form-control" {...register('img',{required: false})}/>
+                    </div>
+                    <div className="mb-3">
+                        <ul>
+                            {fields.map((item, index) => (
+                                <li key={item.id}>
+                                    <label htmlFor="" className="form-label">Nivel de Estudio {index+1}</label>
+                                    <select name="cap_disc" defaultValue={'DEFAULT'} id="" className="form-select" {...register(`nivel_estudio.${index}.nivel_estudio`,{required: true})}>
+                                        <option value="primaria">Primaria</option>
+                                        <option value="bachillerato">Bachillerato</option>
+                                        <option value="pregrado">Pregrado</option>
+                                        <option value="posgrado">Posgrado</option>
+                                    </select>
+                                    <button type="button" className='btn btn-danger' onClick={() => remove(index)}>Delete</button>
+                                </li>
+                            ))}
+                        </ul>
+                        <label htmlFor="" className="form-label">Añade un nivel de estudio que sirva para el computador</label>
+                        <button
+                            type="button"
+                            className='btn btn-danger form-control'
+                            onClick={() => append({ nivel_estudio: ""})}
+                        >Añadir
+                        </button>
+                    </div>
+                    
+                    <div className="mb-3">
+                        <label htmlFor="" className="form-label">Area de Estudios</label>
+                        <input type="text"className="form-control" placeholder="escribir sin espacio y separadas por coma" {...register('area_estudio',{required: true})}/>
+                    </div>
+
+                    <div className="mb-3">
+                        <label htmlFor="" className="form-label">Area de trabajo</label>
+                        <input type="text"className="form-control" placeholder="escribir sin espacio y separadas por coma" {...register('area_trabajo',{required: true})}/>
                     </div>
                     <center>
                         <div className='container'>
