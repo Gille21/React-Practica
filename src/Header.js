@@ -123,7 +123,7 @@ function Header() {
                     <NavDropdown.Item href="#action/3.1">Configuración</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Perfil</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="/logout">Salir</NavDropdown.Item>
+                    <NavDropdown.Item><Link to="/logout" className="nav-link">Salir</Link></NavDropdown.Item>
                   </NavDropdown>
                 </li>
               </ul>
