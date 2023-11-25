@@ -21,7 +21,7 @@ const Ccompu = () => {
 //Aca realiza la validación a la hora de ingresar tenga la sesión del login, que vista mostrar
 const LoggedInView = ({ user }) => {
 
-    const {register, control ,handleSubmit, formState: {errors}} = useForm();
+    const {register, control ,handleSubmit, reset: resetForm, formState: {errors}} = useForm();
 
     const {fields, append, remove} = useFieldArray ({
         control,
@@ -63,8 +63,8 @@ const LoggedInView = ({ user }) => {
         data["nivel_estudio"] = est.toString()
         const res = await createCompu(data);
                 // Después de guardar, muestra el mensaje y restablece el formulario
-                setSavedMessage("Computador Guardado");
-                reset();
+        setSavedMessage("Computador Guardado");
+        resetForm();
     })
 
     return (

@@ -39,8 +39,8 @@ function Formulario() {
   });
 
   const handlePropositoChange = (value) => {
-    setShowEstudiosOptions(value === 'Estudios');
-    setShowTrabajoOptions(value === 'Trabajo');
+    setShowEstudiosOptions(value === 'estudios');
+    setShowTrabajoOptions(value === 'trabajo');
     setShowTrabajoAreaOptions(false); // Asegurarse de que el bloque adicional no se muestre por defecto
   };
 
@@ -66,10 +66,10 @@ function Formulario() {
             defaultValue="vacio"  
           >
             <option value="vacio" disabled>Selecciona una opción</option>
-            <option value="Trabajo">Trabajo</option>
-            <option value="Gamer">Gamer</option>
-            <option value="Entretenimiento">Entretenimiento</option>
-            <option value="Estudios">Estudios</option>
+            <option value="trabajo">Trabajo</option>
+            <option value="gamer">Gamer</option>
+            <option value="entretenimiento">Entretenimiento</option>
+            <option value="estudios">Estudios</option>
           </select>
         </div>
 
