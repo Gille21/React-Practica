@@ -50,7 +50,7 @@ function Resultado() {
 
                     <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                       <div className="text-center">
-                        <Link to={`/producto/${producto.id}`}>
+                        <Link to={`/producto/${producto.id_computer}`}>
                           <button className="btn btn-outline-dark view-button">
                             View Options
                           </button>
