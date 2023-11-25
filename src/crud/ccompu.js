@@ -50,6 +50,7 @@ const LoggedInView = ({ user }) => {
         }
         return data
     }
+    const [savedMessage, setSavedMessage] = useState("");
 
 
     const onSubmit = handleSubmit(async data => {
@@ -61,6 +62,9 @@ const LoggedInView = ({ user }) => {
         data["id_user"] = user["user_id"]
         data["nivel_estudio"] = est.toString()
         const res = await createCompu(data);
+                // Después de guardar, muestra el mensaje y restablece el formulario
+                setSavedMessage("Computador Guardado");
+                reset();
     })
 
     return (
@@ -246,7 +250,12 @@ const LoggedInView = ({ user }) => {
                                 </div>
                             </div>
                         </div>  
-                    </center>                      
+                    </center> 
+                    {savedMessage && (
+                            <div className="mb-3">
+                                <p>{savedMessage}</p>
+                            </div>
+                        )}                     
                 </form>
             </div>
         </div>

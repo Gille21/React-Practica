@@ -45,7 +45,7 @@ function Formulario() {
   };
 
   const handleEstudiosNivelChange = (value) => {
-    setShowEstudiosRamaOptions(value === 'Universidad-Pregrado');
+    setShowEstudiosRamaOptions(value === 'pregrado');
   };
 
   const handleTrabajoAreaChange = (value) => {
@@ -79,8 +79,8 @@ function Formulario() {
             <select
               id="nivelEstudios"
               className="custom-select"
-              {...register('nivelestudios')}
-              onChange={(e) => { setValue('nivelestudios', e.target.value); handleEstudiosNivelChange(e.target.value); }}
+              {...register('nivelEstudios')}
+              onChange={(e) => { setValue('nivelEstudios', e.target.value); handleEstudiosNivelChange(e.target.value); }}
               defaultValue="vacio"  
             >
               <option value="vacio" disabled>Selecciona una opción</option>
@@ -94,7 +94,7 @@ function Formulario() {
 
         {showEstudiosRamaOptions && (
           <div className="form-group">
-            <label htmlFor="ramaestudios">¿En qué Rama de Estudios te enfocas?</label>
+            <label htmlFor="ramaEstudios">¿En qué Rama de Estudios te enfocas?</label>
             <select
               id="ramaEstudios"
               className="custom-select"

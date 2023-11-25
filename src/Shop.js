@@ -165,6 +165,18 @@ function Shop() {
                       Entretenimiento
                     </label>
                   </li>
+                  <li>
+                    <label>
+                      <input
+                        type="radio"
+                        name="purpose"
+                        value="Entretenimiento"
+                        checked={filters.purpose === 'Estudios'}
+                        onChange={() => setFilters({ ...filters, purpose: 'Estudios' })}
+                      />
+                      Estudios
+                    </label>
+                  </li>
                 </ul>
               </li>
             </ul>

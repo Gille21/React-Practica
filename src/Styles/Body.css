@@ -1,0 +1,23 @@
+/* Body.css */
+
+.about-hero-image {
+  width: 400px;
+  height: 300px;
+}
+
+/* Estilos para el botón */
+.btn-success {
+  background-color: #212934 !important;
+  border-color: #212934 !important;
+  color: #fff;
+  font-size: 20px; /* Ajusta el tamaño del texto del botón según tus preferencias */
+  padding: 10px 20px; /* Ajusta el relleno del botón según tus preferencias */
+}
+
+/* Estilos para el párrafo */
+.bg-success p {
+  font-size: 20px; /* Tamaño del texto del párrafo */
+  font-family: 'Sans Serif', sans-serif; /* Cambia 'Arial' por la fuente que desees */
+  text-align: justify;
+  /* Otros estilos que desees agregar */
+}
